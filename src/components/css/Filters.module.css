@@ -1,0 +1,356 @@
+.filtersContainer {
+    margin: 0 1rem;
+    margin-bottom: 2rem;
+}
+
+.filtersHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+/* Search Input Styles */
+.searchFormInline {
+    flex: 1;
+    min-width: 200px;
+}
+
+.searchWrapperInline {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.searchInputInline {
+    width: 100%;
+    padding: 0.75rem 2.5rem 0.75rem 1rem;
+    background: rgba(26, 26, 26, 0.6);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.searchInputInline::placeholder {
+    color: var(--text-secondary);
+}
+
+.searchInputInline:focus {
+    outline: none;
+    border-color: var(--primary);
+    background: rgba(26, 26, 26, 0.8);
+    box-shadow: 0 0 0 3px rgba(229, 9, 20, 0.15);
+}
+
+.clearButtonInline {
+    position: absolute;
+    right: 45px;
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 1.25rem;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    transition: all 0.2s ease;
+}
+
+.clearButtonInline:hover {
+    color: var(--primary-hover);
+    transform: scale(1.1);
+}
+
+.searchButtonInline {
+    position: absolute;
+    right: 8px;
+    background: var(--primary);
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.searchButtonInline svg {
+    color: #fff;
+}
+
+.searchButtonInline svg:hover {
+    color: var(--primary-hover);
+    transform: scale(1.1);
+}
+
+/* Toggle Button */
+.toggleButton {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    background: rgba(26, 26, 26, 0.5);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.toggleButton:hover {
+    background: rgba(35, 35, 35, 0.7);
+    border-color: var(--primary-hover);
+}
+
+.toggleButton svg {
+    color: var(--primary-hover);
+}
+
+.filterCount {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 20px;
+    height: 20px;
+    padding: 0 0.4rem;
+    background: var(--primary-hover);
+    border-radius: 10px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.clearButton {
+    padding: 0.75rem 1.25rem;
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text-secondary);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.clearButton:hover {
+    background: var(--primary-hover);
+    border-color: var(--primary-hover);
+    color: var(--text-primary);
+}
+
+.filtersPanel {
+    background: rgba(26, 26, 26, 0.5);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    backdrop-filter: blur(10px);
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.filterSection {
+    margin-bottom: 1rem;
+}
+
+.filterSection:last-child {
+    margin-bottom: 0;
+}
+
+.filterTitle {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 1rem;
+}
+
+.genreGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 0.75rem;
+}
+
+.genreButton {
+    padding: 0.625rem 1rem;
+    background: rgba(35, 35, 35, 0.5);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text-primary);
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.genreButton:hover {
+    background: rgba(45, 45, 45, 0.7);
+    border-color: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
+.genreButtonActive {
+    background: var(--primary) !important;
+    border-color: var(--primary) !important;
+    color: #fff !important;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(229, 9, 20, 0.3);
+}
+
+.genreButtonActive:hover {
+    background: var(--primary-hover) !important;
+    border-color: var(--primary-hover) !important;
+}
+
+/* Genre Dropdown Panel */
+.genreDropdownPanel {
+    background: rgba(26, 26, 26, 0.7);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    backdrop-filter: blur(15px);
+    animation: slideDown 0.3s ease-out;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.genreActions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.75rem;
+    margin-top: 1.25rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+}
+
+.clearAllButton {
+    padding: 0.625rem 1.25rem;
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text-secondary);
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.clearAllButton:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--text-secondary);
+    color: var(--text-primary);
+}
+
+.applyButton {
+    padding: 0.625rem 1.25rem;
+    background: var(--primary-hover);
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.applyButton:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(229, 9, 20, 0.4);
+}
+
+.activeFilters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.filterTag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    background: rgba(229, 9, 20, 0.15);
+    border: 1px solid rgba(229, 9, 20, 0.3);
+    border-radius: 8px;
+    color: var(--text-primary);
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.removeTag {
+    background: transparent;
+    border: none;
+    color: var(--text-primary);
+    font-size: 1.25rem;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    transition: all 0.2s ease;
+}
+
+.removeTag:hover {
+    color: var(--primary-hover);
+    transform: scale(1.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .filtersHeader {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .toggleButton,
+    .clearButton {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .genreGrid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 0.5rem;
+    }
+
+    .genreButton {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .genreGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

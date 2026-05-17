@@ -1,0 +1,165 @@
+.notFoundContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--background);
+  padding: 2rem;
+}
+
+.content {
+  text-align: center;
+}
+
+.iconWrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+  background-color: var(--accent);
+  border-radius: 50%;
+  margin-bottom: 2rem;
+  border: 3px solid var(--border);
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+  color: var(--primary-hover);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.errorCode {
+  font-size: 8rem;
+  font-weight: 900;
+  color: var(--text-primary);
+  line-height: 1;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  margin-bottom: 3rem;
+  line-height: 1.6;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.primaryButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  background-color: var(--primary-hover);
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.primaryButton:hover {
+  background-color: var(--primary-dark);
+  transform: scale(1.05);
+}
+
+.primaryButton:active {
+  transform: scale(0.98);
+}
+
+.buttonIcon {
+  font-size: 1.25rem;
+  transition: transform 0.2s ease;
+}
+
+.primaryButton:hover .buttonIcon {
+  transform: translateX(-4px);
+}
+
+.secondaryButton {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: var(--accent-light);
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 1rem;
+  border: 2px solid var(--border);
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.secondaryButton:hover {
+  border-color: var(--text-secondary);
+  background-color: var(--accent);
+  transform: scale(1.05);
+}
+
+.secondaryButton:active {
+  transform: scale(0.98);
+}
+
+/* Animaciones */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .iconWrapper {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .icon {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .errorCode {
+    font-size: 5rem;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+  }
+  
+  .description {
+    font-size: 1rem;
+  }
+  
+  .buttonGroup {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+    justify-content: center;
+  }
+}
