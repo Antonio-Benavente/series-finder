@@ -7,12 +7,6 @@ Una aplicación web moderna para descubrir y explorar series de TV y películas,
 ![Vite](https://img.shields.io/badge/Vite-7.x-646CFF)
 ![Status](https://img.shields.io/badge/Status-Active-success)
 
-## Demo
-
-**Demo en vivo:** https://series-finder.netlify.app
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/c9b5c63d-0996-4898-ba4a-f34245cd0fda/deploy-status)](https://app.netlify.com/projects/series-finder/deploys)
-
 ## Características
 
 - **Búsqueda Global** – Busca series y películas desde la barra de búsqueda en el header con redirección inteligente.
